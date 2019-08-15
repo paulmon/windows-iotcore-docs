@@ -41,7 +41,7 @@ To install Python on Windows IoT Core:
     python -m pip install --upgrade pip
     ```
 
-## Using Python on Windows Iot Core ARM32
+## Using Python on Windows IoT Core ARM32
 
 To get Python for Windows you will need to build the binaries yourself.
 
@@ -59,7 +59,7 @@ To get Python for Windows you will need to build the binaries yourself.
     ```cmd
     REM Build Python for x86 to use for building the .zip file.
     pcbuild\build.bat
-    pcbuild\win32\python.exe PC/layout -vv -s "." -b ".\PCBuild\arm32" -t ".\PCBuild\temp" --preset-iot --include-venv --zip ".\PCBuild\arm32\zip\python.zip"
+    pcbuild\win32\python.exe PC/layout -vv -s "." -b ".\PCBuild\arm32" -t ".\PCBuild\arm32\temp" --preset-iot --include-venv --zip ".\PCBuild\arm32\zip\python.zip"
 
     net use P: \\[ip address]\c$ /user:administrator
 
@@ -80,7 +80,7 @@ To get Python for Windows you will need to build the binaries yourself.
     python -c "print('Hello World!');quit()"
     ```
 
-## Using Python on Windows Iot Core ARM64
+## Using Python on Windows IoT Core ARM64
 
 To get Python for Windows you will need to build the binaries yourself.
 
@@ -127,7 +127,7 @@ To get Python for Windows you will need to build the binaries yourself.
 
     REM Map drive to device and copy files using PC/layout
     net use P: \\[ip address]\c$ /user:administrator
-    pcbuild\win32\python.exe PC/layout -vv -s "." -b ".\PCBuild\arm64" -t ".\PCBuild\temp" --preset-iot --include-venv --copy P:\python
+    pcbuild\win32\python.exe PC/layout -vv -s "." -b ".\PCBuild\arm64" -t ".\PCBuild\arm64\temp" --preset-iot --include-venv --copy P:\python
     ```
 
 3. Add Python to the system path.
@@ -255,6 +255,6 @@ In the output for the `pip install` there may be errors: `Download error on http
     ```
 
 ## Additional Python Developer Resources
-[Python Developer's Guide](https://devguide.python.org/setup/#setup)
-[Build CPython on Windows](https://cpython-core-tutorial.readthedocs.io/en/latest/build_cpython_windows.html)
+- [Python Developer's Guide](https://devguide.python.org/setup/#setup)
+- [Build CPython on Windows](https://cpython-core-tutorial.readthedocs.io/en/latest/build_cpython_windows.html)
 
